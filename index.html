@@ -1,7 +1,557 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="light"> 
+<head>
+
+<title>hello</title>
+
+<link rel="shortcut icon" href="/>
+<meta name="description" content=""/>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+<script> 
+    const storedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    if (storedTheme) {
+        document.documentElement.setAttribute("data-theme", storedTheme); 
+    }
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+<style>
+:root {
+    --font1: 'Inter', sans-serif;
+    --font2: 'Roboto Mono', monospace;
+    --font-size: 15px;
+    --line-height: 1.8;
+    --sb-width: 250px;
+    --gap1: 1.2rem;
+    --gap2: 1.5rem;
+    --gap3: 2rem;
+    --gap4: 3rem;
+    --gap5: 4rem;
+    --round1: 0.5rem;
+    --round2: 0.7rem;
+    --round3: 1rem;
+    --circle: 100%;
+}
+:root, html[data-theme='light'] {
+    --light-on: block;
+    --light-off: none;
+    --c-text: #1e1e1e;
+    --c-link: #a5a5a5;
+    --c-bg1: #ffffff;
+    --c-bg2: #f6f6f6;
+    --c-border: #eeeeee;
+    --c-acc1: #cbd7b5;
+}
+
+html[data-theme='dark'] {
+    --light-on: none;
+    --light-off: block;
+    --c-text: #f0f0f4;
+    --c-link: #b1b1b1;
+    --c-bg1: #161616;
+    --c-bg2: #2f2f2f;
+    --c-border: #404040;
+    --c-acc1: #ccd890;
+}
+
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *:before,
+html.theme-transition *:after {
+  transition: 0.0s !important;
+  transition-delay: 0 !important;
+}
+
+*,*::before,*::after {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--c-acc1) var(--c-bg1);
+}
+html {
+    font-size: 62.5%;
+    height: 100%;
+    scrollbar-width: thin;
+}
+button,
+textarea,
+select {
+    font: inherit;
+}
+button {
+    outline: none;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    display: inherit;
+    cursor: pointer;
+    color: inherit;
+}
+p,h1,h2,h3,h4,h5,h6 {
+    overflow-wrap: break-word;
+}
+::-moz-selection {
+    background-color: var(--c-acc1);
+    color:var(--c-text);
+}
+::selection {
+    background-color: var(--c-acc1);
+    color:var(--c-text); 
+}
+::-webkit-scrollbar {
+    width: 16px;
+    background-color: var(--c-bg1);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--c-acc1);
+    background-clip: padding-box;
+    border: 6px solid transparent;
+    border-radius: var(--round3);
+}
+::-webkit-scrollbar-track {
+    background-color: var(--c-bg1);
+}
+.tippy-box[data-theme~='custom'] {
+    font-size: 12px;
+    font-weight: 400;
+    text-align:center;
+    padding: 0;
+    color: var(--c-bg1);
+    font-family: var(--font2);
+    border: 0px solid var(--c-border);
+    border-radius: var(--round1);
+    background-color: var(--c-text);
+    text-transform: lowercase;
+    margin: 1.5rem;
+    z-index: 9999999;
+}
+body {
+    font-family: var(--font1);
+    font-size: var(--font-size);
+    color: var(--c-text);
+    background-color: var(--c-bg1);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    font-weight: 400;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    justify-content: space-between;
+    padding: var(--gap3);
+}
+a {
+    color:var(--c-link);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+a:hover {
+    color: var(--c-acc1); 
+    transition: all 0.2s ease;
+}
+.flex {
+	display: flex;
+}
+.centered {
+	align-items: center;
+	justify-content: center;
+}
+.align-center {
+	align-items: center;
+}
+.justify-center {
+	justify-content: center;
+}
+.between {
+	justify-content: space-between;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.gap1 {
+    gap: var(--gap1);
+}
+.gap2 {
+    gap: var(--gap2);
+}
+.gap3 {
+    gap: var(--gap3);
+}
+.gap4 {
+    gap: var(--gap4);
+}
+.gap5 {
+    gap: var(--gap5);
+}
+.light-on {
+    display: var(--light-on);
+}
+.light-off{
+    display: var(--light-off); 
+}
+main {
+    justify-items: center;
+    flex: 1;
+    flex-direction: column;
+}
+header {
+    margin-bottom: var(--gap5);
+}
+header .title {
+    font-weight: 700;
+    font-size: 17px;
+}
+.toppers {
+    background-color: var(--c-bg1);
+    padding: 0.8rem;
+    border-radius: var(--round1);
+}
+.toppers:hover{
+    background-color: var(--c-bg2);
+}
+button.theme-toggle {
+    background-color: var(--c-bg2);
+}
+a.followme {
+    color: var(--c-text);
+    font-family: var(--font2);
+    font-size: 11px;
+}
+a.followme i {
+    font-size: 1.5em;
+    margin-right: 0.5rem;
+}
+section {
+    flex-direction: column;
+}
+:is(article.intro, span.link-sub) {
+    line-height: var(--line-height); 
+}
+article.intro {
+    border-bottom: 1px solid var(--c-border);
+    padding-bottom: var(--gap4);
+}
+button.toggle-nav {
+    width: 100%;
+    padding: var(--gap2);
+    background-color: var(--c-bg2);
+    margin-bottom: var(--gap3);
+    border-radius: var(--round2);
+}
+nav.menu {
+    margin-bottom: var(--gap3);
+}
+span.nav-spin {
+    transition: transform .5s ease;
+    transform: rotateX(0deg);
+    display: inline-flex;
+}
+span.nav-spin.active {
+    transform: rotateX(180deg);
+}
+.nav-wrap {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+a.menu-link {
+    display: flex;
+    gap: var(--gap3);
+    align-items: center;
+    width: 100%;
+    padding: var(--gap2);
+    background-color: var(--c-bg2);
+    margin-bottom: var(--gap3);
+    border-radius: var(--round2);
+}
+a.menu-link:hover {
+    color: var(--c-text);
+}
+a.menu-link img {
+    width: 40px;
+    border-radius: var(--round3);
+}
+.link-text {
+    font-family: var(--font2);
+}
+span.link-title {
+    font-weight: 500;
+    font-size: 12px;
+}
+span.link-title::after {
+    content: ':';
+    display: inline-block;
+}
+span.link-sub {
+    font-size: 10px;
+}
+
+article.findme .title {
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: var(--gap2);
+}
+nav.social {
+    font-size: 22px;
+}
+nav.social a {
+    color: var(--c-text);
+}
+nav.social a:hover {
+    color: var(--c-link);
+}
+footer.footer-bottom {
+    margin-top: var(--gap5);
+    line-height: 1.6;
+    text-align: center;
+    font-family: var(--font2);
+    font-size: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+
+</style>
+
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+    <main class="flex">
+        
+        <header class="flex gap2 between align-center">
+            <div class="title">Hi. I'm Flipse.</div>
+
+
+            <div class="flex align-center gap1">
+                <button class="theme-toggle toppers" type="button" aria-label="toggle dark or light mode">
+                    <i class="ti ti-sun light-on"></i>
+                    <i class="ti ti-moon light-off"></i>
+                </button>
+                <a href="https://www.threads.net/@flipse.jpg" target="_blank" class="followme toppers flex align-center">
+                    <i class="ti ti-brand-threads"></i>
+                    <span>Follow me</span>
+                </a>
+            </div>
+
+           
+        </header>
+
+        <section class="flex gap5">
+            <article class="intro">
+                📍 Denmark ☕️ desk setup on a tight budget 🎧 huge music nerd 💙 Doctor Who fan 😌 never left Tumblr 🧦 cozy web dev'ing
+            </article>
+
+            <article class="used">
+                <button class="toggle-nav flex align-center between gap3" type="button">
+                    <span>Desk setup</span>
+                    <span class="nav-spin"><i class="ti ti-chevron-down"></i></span>
+                </button>
+
+                <div class="nav-wrap">
+                    <nav class="menu">
+
+                        <a class="menu-link" target="_blank" href="https://jysk.dk/kontor/skriveborde/skrivebord-stauning-80x160-hvid">
+                            <img src="https://i.imgur.com/zW6T5xo.jpg">
+
+                            <div class="link-text">
+                                <span class="link-title">Desk</span>
+                                <span class="link-sub">Staunning by Jysk</span>
+                            </div>
+                        </a>
+
+                        <a class="menu-link" target="_blank" href="https://www.amazon.co.uk/dp/B093KY8N3X/?coliid=I2KGBB3O5H13OJ&colid=1BVNG3LCZDAST&psc=1&ref_=list_c_wl_ys_dp_it">
+                            <img src="https://i.imgur.com/3EV345i.jpg">
+
+                            <div class="link-text">
+                                <span class="link-title">LED Lights</span>
+                                <span class="link-sub">by Govee</span>
+                            </div>
+                        </a>
+
+                        <a class="menu-link" target="_blank" href="https://www.ikea.com/dk/da/p/elloven-skaermhylde-med-skuffe-hvid-50474770/">
+                            <img src="https://i.imgur.com/xZIkaO9.jpg">
+
+                            <div class="link-text">
+                                <span class="link-title">Monitor stand</span>
+                                <span class="link-sub">Elloven by Ikea </span>
+                            </div>
+                        </a>
+
+                        <a class="menu-link" target="_blank" href="https://www.logitech.com/en-eu/products/mice/lift-vertical-ergonomic-mouse.html">
+                            <img src="https://i.imgur.com/RNxeI7z.jpg">
+
+                            <div class="link-text">
+                                <span class="link-title">Mouse</span>
+                                <span class="link-sub">Vertical Ergonomic Lift by Logitech</span>
+                            </div>
+                        </a>
+
+                        <a class="menu-link" target="_blank" href="https://www.power.dk/computere-og-tablets/tastatur-og-mus/musemaatte/dacota-platinum-pu-musemaatte-brun/p-998916/">
+                            <img src="https://i.imgur.com/Y0g1aXc.jpg">
+
+                            <div class="link-text">
+                                <span class="link-title">Mousepad</span>
+                                <span class="link-sub">PU leather by Dacota</span>
+                            </div>
+                        </a>
+
+                    </nav>
+                </div>
+
+                <button class="toggle-nav flex align-center between gap3" type="button">
+                    <span>Keyboard</span>
+                    <span class="nav-spin"><i class="ti ti-chevron-down"></i></span>
+                </button>
+
+                <div class="nav-wrap">
+                    <nav class="menu">
+                        <a class="menu-link" target="_blank" href="https://kbdfans.com/">
+                            <img src="https://i.imgur.com/NR8AgJd.jpg">
+
+                            <div class="link-text">
+                                <span class="link-title">Keyboard</span>
+                                <span class="link-sub">Tiger 80 Lite ISO by kbdfans</span>
+                            </div>
+                        </a>
+
+                        <a class="menu-link" target="_blank" href="https://www.logitech.com/da-dk/products/keyboards/pop-keys-wireless-mechanical.html">
+                            <img src="https://i.imgur.com/f7I268p.jpg">
+
+                            <div class="link-text">
+                                <span class="link-title">Keyboard</span>
+                                <span class="link-sub">POP Keys by Logitech</span>
+                            </div>
+                        </a>
+
+                        <a class="menu-link" target="_blank" href="https://www.amazon.co.uk/gp/aw/d/B0BYJBRT6L?ref=ppx_pt2_mob_b_prod_image">
+                            <img src="https://i.imgur.com/A1DpGEE.jpg">
+
+                            <div class="link-text">
+                                <span class="link-title">Keycaps</span>
+                                <span class="link-sub">by Sumgsn</span>
+                            </div>
+                        </a>
+
+                        <a class="menu-link" target="_blank" href="https://kprepublic.com/products/tecsee-ice-candy-transparent-linear-switch-5pin-rgb-smd-63-5g-force-mx-for-mechanical-keyboard-gold-sping-pc-housing-clear">
+                            <img src="https://i.imgur.com/a18XhW5.jpg">
+
+                            <div class="link-text">
+                                <span class="link-title">Switches</span>
+                                <span class="link-sub">Ice Candy by TECSEE</span>
+                            </div>
+                        </a>
+                    </nav>
+                </div>
+            </article>
+            <article class="findme">
+                <div class="title">Elsewhere</div>
+                <nav class="social flex gap1 wrap align-center">
+                    <a target="_blank" title="Ko-fi" href="https://ko-fi.com/flipse"><i class="ti ti-coffee"></i></a>
+                    <a target="_blank" title="GitHub" href="https://github.com/flipsewtf"><i class="ti ti-brand-github"></i></a>
+                    <a target="_blank" title="Instagram" href="https://www.instagram.com/flipse.jpg/"><i class="ti ti-brand-instagram"></i></a>
+                    <a target="_blank" title="Tumblr" href="https://mournstera.tumblr.com/"><i class="ti ti-brand-tumblr"></i></a>
+                    <a target="_blank" title="Discogs" href="https://www.discogs.com/user/flipses/collection"><i class="ti ti-vinyl"></i></a>
+                </nav>
+            </article>
+            
+        </section>
+
+    </main>
+
+    <footer class="footer-bottom">
+        Powered by 💕 & simple HTML/CSS/JS.
+    </footer>
+
+
+<!-- TOOLTIP: tippy.js -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButtons = document.querySelectorAll(".toggle-nav");
+
+    toggleButtons.forEach((toggleButton) => {
+        const navWrap = toggleButton.nextElementSibling; // Assuming .nav-wrap follows the button
+        const navSpin = toggleButton.querySelector(".nav-spin");
+
+        toggleButton.addEventListener("click", function () {
+            navWrap.classList.toggle("active");
+            navSpin.classList.toggle("active");
+
+            if (navWrap.classList.contains("active")) {
+                navWrap.style.maxHeight = navWrap.scrollHeight + "px";
+            } else {
+                navWrap.style.maxHeight = 0;
+            }
+        });
+    });
+});
+
+//  tooltip
+const commonOptions = {
+    theme: "custom",
+    arrow: false,
+    followCursor: true,
+    placement: "top",
+    touch: "hold",
+};
+
+tippy("[title]", {
+    ...commonOptions,
+    content(reference) {
+        const title = reference.getAttribute("title");
+        reference.removeAttribute("title");
+        return title;
+    },
+});
+
+// toggle dark/light
+const modeButtons = document.querySelectorAll(".theme-toggle");
+
+modeButtons.forEach((btn) => {
+    const storedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    const initialTooltipText = storedTheme === "dark" ? "Toggle light mode" : "Toggle dark mode";
+    tippy(btn, {
+        ...commonOptions,
+        content: initialTooltipText, 
+    });
+
+    btn.addEventListener("click", function () { 
+        const currentTheme = document.documentElement.getAttribute("data-theme");
+        const targetTheme = currentTheme === "light" ? "dark" : "light";
+
+        const tooltipText = targetTheme === "dark" ? "Toggle light mode" : "Toggle dark mode";
+        btn._tippy.setContent(tooltipText);
+
+        document.documentElement.classList.add("theme-transition");
+        document.documentElement.setAttribute("data-theme", targetTheme);
+        localStorage.setItem("theme", targetTheme);
+
+        setTimeout(function () {
+            document.documentElement.classList.remove("theme-transition");
+        }, 50);
+    });
+});
+</script>
 </body>
 </html>
