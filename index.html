@@ -1,1 +1,160 @@
-this is a test!
+<!DOCTYPE html>
+
+<html lang="en" data-theme="light"> 
+    <head>
+        <title>flipse.me</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="https://i.imgur.com/ZgisjPA.png" />
+        <meta name="description" content="" />
+
+        <script> 
+            const storedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+            if (storedTheme) {
+            document.documentElement.setAttribute("data-theme", storedTheme); 
+            }
+        </script>
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js/dist/svg-arrow.css" />
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css">
+        <link href="style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="site-container">
+            
+            <main>
+                
+                <nav class="head" role="navigation">
+                    <a data-content="content1" class="disabled">bio</a>
+                    <a data-content="content2">find me</a>
+                    <a data-content="content3">what's in my bag</a>
+                </nav>
+                
+                <section>
+                    <article id="content1" class="bio-find content active">
+                        <p>My name is <span data-tippy-content="she/her">Flipse</span>, and I'm a hobby-coding, <a data-tippy-content="Discogs profile" href="https://www.discogs.com/user/flipses/collection" target="_blank">record</a>-collecting, concert-enthusiast from Denmark.</p>
+                        <p>I specialize in <a data-tippy-content="View my work" href="https://mournstera.tumblr.com/" target="_blank">Tumblr</a> themes, and have been creating them since 2012.</p>
+
+                        <p class="bio-like" style="margin-top: 5rem;">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-heart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z" /></svg>
+                            <span class="like-words">
+                                <span>Doctor Who</span>
+                                <span>surfing</span> 
+                                <span>desk setup</span>
+                                <span>watermelon</span>
+                            </span>
+                        </p>
+                        <p class="bio-like" style="margin-top: 3rem;">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-thumb-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M13 21.008a3 3 0 0 0 2.995 -2.823l.005 -.177v-4h2a3 3 0 0 0 2.98 -2.65l.015 -.173l.005 -.177l-.02 -.196l-1.006 -5.032c-.381 -1.625 -1.502 -2.796 -2.81 -2.78l-.164 .008h-8a1 1 0 0 0 -.993 .884l-.007 .116l.001 9.536a1 1 0 0 0 .5 .866a2.998 2.998 0 0 1 1.492 2.396l.007 .202v1a3 3 0 0 0 3 3z" /><path d="M5 14.008a1 1 0 0 0 .993 -.883l.007 -.117v-9a1 1 0 0 0 -.883 -.993l-.117 -.007h-1a2 2 0 0 0 -1.995 1.852l-.005 .15v7a2 2 0 0 0 1.85 1.994l.15 .005h1z" /></svg>
+                            <span class="like-words">
+                                <span>winter</span>
+                                <span>cheese</span>
+                                <span>horror</span>
+                                <span>techno</span>
+                            </span>
+                        </p>
+                    </article>
+                    
+                    <article id="content2" class="bio-find content">
+                        <p>So, <a href="https://mournstera.tumblr.com/" target="_blank">Tumblr</a> is where you find most of my work, but if you're looking at plugins and script titbits, <a href="https://github.com/flipsewtf" target="_blank">Github</a> is where it's at.</p>
+                        <p>If you're into aesthetic shit and desk setups, I'm on <a href="https://www.threads.net/@flipse.journal" target="_blank">Threads</a>, while <a href="https://bsky.app/profile/flipse.me" target="_blank">Bluesky</a> is for basically ✨<i>everything</i>✨ in between.</p>
+                    </article>
+                    
+                    <article id="content3" class="bag content">
+                        <p class="psa">Here's some of my desk setup info and other bits and pieces. I'm always on a tight budget due to being chronically ill, so this is is me being mindful.</p>
+                        
+                        <h3>hardware</h3>
+                        <a target="_blank" href="https://www.omen.com/us/en/desktops/omen-25l.html">
+                            <span class="link-title">Computer</span>
+                            <span class="link-sub">HP Omen 25L i5-12/16/2048/3070 (White version). I am not a big gamer, but it handles games like Coral Island and Palia extremely well. </span>
+                        </a>
+                        <a target="_blank" href="https://www.omen.com/us/en/desktops/omen-25l.html">
+                            <span class="link-title">Tablet</span>
+                            <span class="link-sub">Samsung Galaxy Tab S9+ 5G. Absolutely in love with this.</span>
+                        </a>
+                        <a target="_blank" href="https://www.amazon.co.uk/Lenovo-D32q-20-31-5-FreeSync-Monitor/dp/B085ZXS65Y">
+                            <span class="link-title">Monitor</span>
+                            <span class="link-sub">Lenovo D32q-20. Not super gamer friendly, but I'm not much of a gamer anyways. got it on sale, will be upgrading at some point.</span>
+                        </a>
+                        <a target="_blank" href="https://www.logitech.com/en-eu/products/mice/lift-vertical-ergonomic-mouse.html">
+                            <span class="link-title">Mouse</span>
+                            <span class="link-sub">Vertical Ergonomic Lift by Logitech. absolute game-changer, my wrist and shoulder are both very happy.</span>
+                        </a>
+                        <a target="_blank" href="https://www.logitech.com/en-eu/products/mice/lift-vertical-ergonomic-mouse.html">
+                            <span class="link-title">Keyboard</span>
+                            <span class="link-sub">YINDIAO AK820 Mechanical 75%  Keyboard. Really impresseive considering the price. Came with pre-lubed Tactile HP Yellow Switch that sound really nice! Looking to find some linear ones.</span>
+                        </a>
+                        <a target="_blank" href="https://www.logitech.com/en-eu/products/mice/lift-vertical-ergonomic-mouse.html">
+                            <span class="link-title">Keycaps</span>
+                            <span class="link-sub">Gradient green Keycaps from Sumgsn. budget keycaps that I love with all my heart.</span>
+                        </a>
+                        <a target="_blank" href="https://www.ultimateears.com/en-hk/wireless-speakers/wonderboom-4.html">
+                            <span class="link-title">Speaker</span>
+                            <span class="link-sub">Ultimate Ears WONDERBOOM 2. On the hunt for proper speakers but I'm picky aesthetic-wise and they can be costly.</span>
+                        </a>
+                        <a target="_blank" href="https://www.jbl.com/on-ear-headphones/TUNE510BT-.html">
+                            <span class="link-title">Headphones</span>
+                            <span class="link-sub">JBL Tune 510BT. Cheap and does the job. Fair sound and nice around my (tiny) ears.</span>
+                        </a>
+                        <a target="_blank" href="https://jysk.co.uk/office/desks/computer-desks/desk-stauning-80x160-white">
+                            <span class="link-title">Desk</span>
+                            <span class="link-sub">Staunning by Jysk. Cheap but study. Would've liked a thicker desk, but this is really great for the price.</span>
+                        </a>
+                        <a target="_blank" href="https://www.ikea.com/dk/da/p/elloven-skaermhylde-med-skuffe-hvid-50474770/">
+                            <span class="link-title">Monitor stand</span>
+                            <span class="link-sub">Elloven by Ikea. Does the job for one monitor. I'm getting a second one so I am on the outlook for something different.</span>
+                        </a>
+                        <a target="_blank" href="https://eu.govee.com/products/govee-neon-rope-light-2?variant=42850406072504">
+                            <span class="link-title">Rope Light</span>
+                            <span class="link-sub">Govee is always a good choice. I've wasted money on cheaper alternatives and I wish I hadn't. I stuck it on the back of my monitor. I don't really use the rgbs though.</span>
+                        </a>
+
+                        <h3>Software</h3>
+                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.penly.penly">
+                            <span class="link-title">Penly App</span>
+                            <span class="link-sub">I've kept a diary since age 10, and practised Bullet Journaling for a decade helping me out with my bipolar disorder and autism. I've since transitioned to online bullet journaling using Penly.</span>
+                        </a>
+                        <a target="_blank" href="https://stardust.app/">
+                            <span class="link-title">Stardust</span>
+                            <span class="link-sub">Period tracker not made by white men.</span>
+                        </a>
+                        <a target="_blank" href="https://code.visualstudio.com/">
+                            <span class="link-title">VS Code</span>
+                            <span class="link-sub">Prefer this to many other apps. I adapted my own markdown to fit Tumblr code editor if I need troubleshooting.</span>
+                        </a>
+                    </article>
+                </section>
+
+            </main>
+
+            <footer> © 2025 Flipse. All rights reserved.</footer>
+
+        </div><!-- .site-container end -->  
+
+
+        <div class="bulb-container flex column align-center">
+    
+            <div class="chord"></div>
+    
+            <button class="bulb theme-toggle bulb-off" aria-label="toggle dark & light mode"  type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" viewBox="0 0 512 512" xml:space="preserve">
+                <path style="fill:#FFEA8A;" d="M249.783,0.118C164.426,3.359,96.311,74.366,96.416,159.784  c0.053,43.258,17.319,82.48,45.314,111.193c21.96,22.523,34.478,52.583,34.478,84.038v4.049v13.299h159.584v-13.299v-4.045  c0-31.47,12.539-61.532,34.503-84.068c28.024-28.754,45.289-68.044,45.289-111.367C415.584,69.385,340.751-3.337,249.783,0.118z"/>
+                <path style="fill:#FFDB2D;" d="M256,0.013v372.35h79.792v-13.299v-4.045c0-31.47,12.539-61.532,34.503-84.068  c28.024-28.754,45.289-68.044,45.289-111.367C415.584,71.448,344.134,0.016,256,0.013z"/>
+                <polygon style="fill:#FFAF33;" points="323.299,213.585 295.09,185.376 256,224.465 216.91,185.376 188.701,213.585   236.052,260.938 236.052,372.363 275.948,372.363 275.948,260.938 "/>
+                <rect x="236.052" y="438.857" style="fill:#AEADB3;" width="39.896" height="73.143"/>
+                <path style="fill:#DFDFE1;" d="M256,452.156c51.413,0,93.091-41.678,93.091-93.091H162.909  C162.909,410.478,204.587,452.156,256,452.156z"/>
+                <path style="fill:#CFCDD2;" d="M256,359.065v93.091c51.413,0,93.091-41.678,93.091-93.091H256z"/>
+                </svg>
+            </button>
+        </div>
+
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script>
+        <script src="jazz.js"></script>
+    </body>
+</html>
