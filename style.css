@@ -245,20 +245,19 @@ article.bag {
 }
 
 /*  THEME TOGGLE */
-html[data-theme='light'] button.theme-toggle .light-off,
-html[data-theme='dark'] button.theme-toggle .light-on {
-    transform: scale(0.0);
+html[data-theme="light"] button.theme-toggle .light-off,
+html[data-theme="dark"] button.theme-toggle .light-on {
+    transform: scale(0);
     opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease!important;
+    transition: transform 0.3s ease, opacity 0.3s ease !important;
 }
 
-html[data-theme='light'] button.theme-toggle .light-on,
-html[data-theme='dark'] button.theme-toggle .light-off {
+html[data-theme="light"] button.theme-toggle .light-on,
+html[data-theme="dark"] button.theme-toggle .light-off {
     transform: scale(1);
     opacity: 1;
-    transition: transform 0.3s ease, opacity 0.3s ease!important;
+    transition: transform 0.3s ease, opacity 0.3s ease !important;
 }
-
 
 button.theme-toggle {
     display: flex;
@@ -271,7 +270,7 @@ button.theme-toggle {
     color: var(--c-bg1);
     padding: 1.8rem;
     border-radius: 50%;
-    
+
     svg {
         width: 22px;
         height: 22px;

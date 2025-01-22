@@ -1,8 +1,7 @@
-
 const commonOptions = {
     theme: "custom",
     followCursor: true,
-    placement: "top", 
+    placement: "top",
     touch: "hold",
     arrow: false,
 };
@@ -21,10 +20,10 @@ themeToggleButtons.forEach((btn) => {
     const initialTooltipText = storedTheme === "dark" ? "Toggle light mode" : "Toggle dark mode";
     tippy(btn, {
         ...commonOptions,
-        content: initialTooltipText, 
+        content: initialTooltipText,
     });
 
-    btn.addEventListener("click", function () { 
+    btn.addEventListener("click", function () {
         const currentTheme = document.documentElement.getAttribute("data-theme");
         const targetTheme = currentTheme === "light" ? "dark" : "light";
 
