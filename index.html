@@ -11,16 +11,14 @@
         <script> 
             const storedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
             if (storedTheme) {
-            document.documentElement.setAttribute("data-theme", storedTheme); 
+                document.documentElement.setAttribute("data-theme", storedTheme); 
             }
         </script>
-        <link rel="stylesheet" href="https://unpkg.com/tippy.js/dist/svg-arrow.css" />
-        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css">
+
         <link href="style.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -28,130 +26,138 @@
         <div class="site-container">
             
             <main>
-                
-                <nav class="head" role="navigation">
-                    <a data-content="content1" class="disabled">bio</a>
-                    <a data-content="content2">find me</a>
-                    <a data-content="content3">what's in my bag</a>
-                </nav>
-                
+
+                <header>
+
+                    <img src="https://i.imgur.com/xazqcoQ.png">
+                    <div class="intro">
+                         Cozy <em>hobby</em> coder & record collecting <em>concert</em> enthusiast.
+                    </div>
+
+                </header>
+
                 <section>
-                    <article id="content1" class="bio-find content active">
-                        <p>My name is <span data-tippy-content="she/her">Flipse</span>, and I'm a hobby-coding, <a data-tippy-content="Discogs profile" href="https://www.discogs.com/user/flipses/collection" target="_blank">record</a>-collecting, concert-enthusiast from Denmark.</p>
-                        <p>I specialize in <a data-tippy-content="View my work" href="https://mournstera.tumblr.com/" target="_blank">Tumblr</a> themes, and have been creating them since 2012.</p>
+                    <h2>/about</h2>
+                    <article class="about">
+                        <p> Hi! <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M207.31,49.18a20,20,0,0,0-38.63-10.35l-18.14,67.68h0l-5.37-1.07h0L127.32,38.83A20,20,0,1,0,88.69,49.18l12.68,47.35v0l-.57-.14L80,92.41a20,20,0,0,0-8,39.19l7.87,1.51a20,20,0,0,0-23.46,15.62,19.52,19.52,0,0,0-.41,4h0V160a72,72,0,0,0,72.55,72c39.7-.3,71.45-33.2,71.45-72.9v-3.34a47.9,47.9,0,0,0-12.59-32.39h0Z" opacity="0.2"/><path d="M72,131.6a20,20,0,0,1,8-39.19l20.81,4a20,20,0,1,1-8,39.19Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M56,152.72V160a72,72,0,0,0,72.55,72c39.7-.3,71.45-33.2,71.45-72.9v-3.34a48,48,0,0,0-38.59-47.07L140,104.41a20,20,0,0,0-8,39.19l15.37,3.07A28,28,0,0,0,152,179.6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M72,172.32a20,20,0,0,1,8-39.19l10,2a20,20,0,0,1-8,39.2Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M101.37,96.53,88.69,49.18a20,20,0,1,1,38.63-10.35l17.85,66.61" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M150.54,106.51l18.14-67.68a20,20,0,0,1,38.63,10.35l-19.88,74.19" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg> My name is Flipse (she/her), and I have specialized in Tumblr themes since 2012. I also do titbits of scripts and fun add-ons, but I'm chronically ill, so everything is made out of pure enjoyment <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M101.11,197.11,58.89,154.89l-18.4,50.63a7.79,7.79,0,0,0,10,10Z" opacity="0.2"/><path d="M78.09,102.09l75.82,75.82,41-14.9a7.79,7.79,0,0,0,2.85-12.84L105.83,58.29A7.79,7.79,0,0,0,93,61.14Z" opacity="0.2"/><path d="M40.49,205.52,93,61.14a7.79,7.79,0,0,1,12.84-2.85l91.88,91.88A7.79,7.79,0,0,1,194.86,163L50.48,215.51A7.79,7.79,0,0,1,40.49,205.52Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M168,72s0-24,24-24,24-24,24-24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="144" y1="16" x2="144" y2="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="216" y1="112" x2="232" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="216" y1="80" x2="240" y2="72" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="78.09" y1="102.09" x2="153.91" y2="177.91" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="101.11" y1="197.11" x2="58.89" y2="154.89" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg></p>
+                            
+                            <p>Concerts and especially building my record collection <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128,32a96,96,0,1,0,96,96A96,96,0,0,0,128,32Zm0,120a24,24,0,1,1,24-24A24,24,0,0,1,128,152Z" opacity="0.2"/><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M64,128a64,64,0,0,1,64-64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M192,128a64,64,0,0,1-64,64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="128" cy="128" r="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg> have my heart, and I also love fiddling with my cozy desk setup <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M32,152V64A16,16,0,0,1,48,48H208a16,16,0,0,1,16,16v88Z" opacity="0.2"/><rect x="32" y="48" width="192" height="144" rx="16" transform="translate(256 240) rotate(180)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="160" y1="224" x2="96" y2="224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="32" y1="152" x2="224" y2="152" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="128" y1="192" x2="128" y2="224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg></p>
 
-                        <p class="bio-like" style="margin-top: 5rem;">
-                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-heart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z" /></svg>
-                            <span class="like-words">
-                                <span>Doctor Who</span>
-                                <span>surfing</span> 
-                                <span>desk setup</span>
-                                <span>watermelon</span>
-                            </span>
-                        </p>
-                        <p class="bio-like" style="margin-top: 3rem;">
-                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-thumb-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M13 21.008a3 3 0 0 0 2.995 -2.823l.005 -.177v-4h2a3 3 0 0 0 2.98 -2.65l.015 -.173l.005 -.177l-.02 -.196l-1.006 -5.032c-.381 -1.625 -1.502 -2.796 -2.81 -2.78l-.164 .008h-8a1 1 0 0 0 -.993 .884l-.007 .116l.001 9.536a1 1 0 0 0 .5 .866a2.998 2.998 0 0 1 1.492 2.396l.007 .202v1a3 3 0 0 0 3 3z" /><path d="M5 14.008a1 1 0 0 0 .993 -.883l.007 -.117v-9a1 1 0 0 0 -.883 -.993l-.117 -.007h-1a2 2 0 0 0 -1.995 1.852l-.005 .15v7a2 2 0 0 0 1.85 1.994l.15 .005h1z" /></svg>
-                            <span class="like-words">
-                                <span>winter</span>
-                                <span>cheese</span>
-                                <span>horror</span>
-                                <span>techno</span>
-                            </span>
-                        </p>
                     </article>
+
+                </section>
+
+                <section>
+
+                    <h2>/socials</h2>
                     
-                    <article id="content2" class="bio-find content">
-                        <p>So, <a href="https://mournstera.tumblr.com/" target="_blank">Tumblr</a> is where you find most of my work, but if you're looking at plugins and script titbits, <a href="https://github.com/flipsewtf" target="_blank">Github</a> is where it's at.</p>
-                        <p>I'm on <a href="https://bsky.app/profile/flipse.me" target="_blank">Bluesky</a> which I use for basically ✨<i>everything</i>✨ from aesthetic shit, to rants and geeking out.</p>
-                    </article>
-                    
-                    <article id="content3" class="bag content">
-                        <p class="psa">Here are some of my desk setup info amongst other things. I'm <i>always</i> on a tight budget due to being chronically ill, so this is me being mindful about my spendings.</p>
+                    <article class="socials">
                         
-                        <h3>hardware</h3>
-                        <a target="_blank" href="https://www.omen.com/us/en/desktops/omen-25l.html">
-                            <span class="link-title">Computer</span>
-                            <span class="link-sub">HP Omen 25L i5-12/16/2048/3070 (White version). I am not a big gamer, but it handles games like Coral Island and Palia extremely well. </span>
-                        </a>
-                        <a target="_blank" href="https://www.omen.com/us/en/desktops/omen-25l.html">
-                            <span class="link-title">Tablet</span>
-                            <span class="link-sub">Samsung Galaxy Tab S9+ 5G. Absolutely in love with this.</span>
-                        </a>
-                        <a target="_blank" href="https://www.amazon.co.uk/Lenovo-D32q-20-31-5-FreeSync-Monitor/dp/B085ZXS65Y">
-                            <span class="link-title">Monitor</span>
-                            <span class="link-sub">Lenovo D32q-20. Not super gamer friendly, but I'm not much of a gamer anyways. got it on sale, will be upgrading at some point.</span>
-                        </a>
-                        <a target="_blank" href="https://www.logitech.com/en-eu/products/mice/lift-vertical-ergonomic-mouse.html">
-                            <span class="link-title">Mouse</span>
-                            <span class="link-sub">Vertical Ergonomic Lift by Logitech. absolute game-changer, my wrist and shoulder are both very happy.</span>
-                        </a>
-                        <a target="_blank" href="https://www.logitech.com/en-eu/products/mice/lift-vertical-ergonomic-mouse.html">
-                            <span class="link-title">Keyboard</span>
-                            <span class="link-sub">YINDIAO AK820 Mechanical 75%  Keyboard. Really impresseive considering the price. Came with pre-lubed Tactile HP Yellow Switch that sound really nice! Looking to find some linear ones.</span>
-                        </a>
-                        <a target="_blank" href="https://www.logitech.com/en-eu/products/mice/lift-vertical-ergonomic-mouse.html">
-                            <span class="link-title">Keycaps</span>
-                            <span class="link-sub">Gradient green Keycaps from Sumgsn. budget keycaps that I love with all my heart.</span>
-                        </a>
-                        <a target="_blank" href="https://www.ultimateears.com/en-hk/wireless-speakers/wonderboom-4.html">
-                            <span class="link-title">Speaker</span>
-                            <span class="link-sub">Ultimate Ears WONDERBOOM 2. On the hunt for proper speakers but I'm picky aesthetic-wise and they can be costly.</span>
-                        </a>
-                        <a target="_blank" href="https://www.jbl.com/on-ear-headphones/TUNE510BT-.html">
-                            <span class="link-title">Headphones</span>
-                            <span class="link-sub">JBL Tune 510BT. Cheap and does the job. Fair sound and nice around my (tiny) ears.</span>
-                        </a>
-                        <a target="_blank" href="https://jysk.co.uk/office/desks/computer-desks/desk-stauning-80x160-white">
-                            <span class="link-title">Desk</span>
-                            <span class="link-sub">Staunning by Jysk. Cheap but study. Would've liked a thicker desk, but this is really great for the price.</span>
-                        </a>
-                        <a target="_blank" href="https://www.ikea.com/dk/da/p/elloven-skaermhylde-med-skuffe-hvid-50474770/">
-                            <span class="link-title">Monitor stand</span>
-                            <span class="link-sub">Elloven by Ikea. Does the job for one monitor. I'm getting a second one so I am on the outlook for something different.</span>
-                        </a>
-                        <a target="_blank" href="https://eu.govee.com/products/govee-neon-rope-light-2?variant=42850406072504">
-                            <span class="link-title">Rope Light</span>
-                            <span class="link-sub">Govee is always a good choice. I've wasted money on cheaper alternatives and I wish I hadn't. I stuck it on the back of my monitor. I don't really use the rgbs though.</span>
+                        
+
+                        <a href="https://bsky.app/profile/flipse.me" data-tippy-content="Bluesky" target="_blank">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bluesky"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6.335 5.144c-1.654 -1.199 -4.335 -2.127 -4.335 .826c0 .59 .35 4.953 .556 5.661c.713 2.463 3.13 2.75 5.444 2.369c-4.045 .665 -4.889 3.208 -2.667 5.41c1.03 1.018 1.913 1.59 2.667 1.59c2 0 3.134 -2.769 3.5 -3.5c.333 -.667 .5 -1.167 .5 -1.5c0 .333 .167 .833 .5 1.5c.366 .731 1.5 3.5 3.5 3.5c.754 0 1.637 -.571 2.667 -1.59c2.222 -2.203 1.378 -4.746 -2.667 -5.41c2.314 .38 4.73 .094 5.444 -2.369c.206 -.708 .556 -5.072 .556 -5.661c0 -2.953 -2.68 -2.025 -4.335 -.826c-2.293 1.662 -4.76 5.048 -5.665 6.856c-.905 -1.808 -3.372 -5.194 -5.665 -6.856z" /></svg>
                         </a>
 
-                        <h3>Software</h3>
-                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.penly.penly">
-                            <span class="link-title">Penly App</span>
-                            <span class="link-sub">I've kept a diary since age 10, and practised Bullet Journaling for a decade helping me out with my bipolar disorder and autism. I've since transitioned to online bullet journaling using Penly.</span>
+                        <a href="https://github.com/flipsewtf" data-tippy-content="GitHub"  target="_blank">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
                         </a>
-                        <a target="_blank" href="https://stardust.app/">
-                            <span class="link-title">Stardust</span>
-                            <span class="link-sub">Period tracker not made by white men.</span>
+
+                        <a href="https://www.threads.net/@flipse.journal" data-tippy-content="Threads" target="_blank">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-threads"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19 7.5c-1.333 -3 -3.667 -4.5 -7 -4.5c-5 0 -8 2.5 -8 9s3.5 9 8 9s7 -3 7 -5s-1 -5 -7 -5c-2.5 0 -3 1.25 -3 2.5c0 1.5 1 2.5 2.5 2.5c2.5 0 3.5 -1.5 3.5 -5s-2 -4 -3 -4s-1.833 .333 -2.5 1" /></svg>
                         </a>
-                        <a target="_blank" href="https://code.visualstudio.com/">
-                            <span class="link-title">VS Code</span>
-                            <span class="link-sub">Prefer this to many other apps. I adapted my own markdown to fit Tumblr code editor if I need troubleshooting.</span>
+
+                        <a href="https://mournstera.tumblr.com/" data-tippy-content="Tumblr" target="_blank">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tumblr"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 21h4v-4h-4v-6h4v-4h-4v-4h-4v1a3 3 0 0 1 -3 3h-1v4h4v6a4 4 0 0 0 4 4" /></svg>
                         </a>
                     </article>
                 </section>
 
+                <section>
+
+                    <h2 style="margin-top: 1px;">/my bag</h2>
+                    
+                    <article class="bag">
+                        <a target="_blank" href="https://www.omen.com/us/en/desktops/omen-25l.html">
+                            <span class="link-title">Computer</span>
+                            <span class="line"></span>
+                            <span class="link-sub">HP Omen 25L i5-12/16/2048/3070</span>
+                        </a>
+                        <a target="_blank" href="https://jysk.co.uk/office/desks/computer-desks/desk-stauning-80x160-white">
+                            <span class="link-title">Desk</span>
+                            <span class="line"></span>
+                            <span class="link-sub">Jysk Staunning</span>
+                        </a>
+                        <a target="_blank" href="https://www.jbl.com/on-ear-headphones/TUNE510BT-.html">
+                            <span class="link-title">Headphones</span>
+                            <span class="line"></span>
+                            <span class="link-sub">JBL Tune 510BT</span>
+                        </a>
+                        <a target="_blank" href="https://www.amazon.com/Sumgsn-Gradient-Mechanical-Keyboard-Switches/dp/B0BYJBRT6L?th=1">
+                            <span class="link-title">Keycaps</span>
+                            <span class="line"></span>
+                            <span class="link-sub">Sumgsn gradient green</span>
+                        </a>
+                        <a target="_blank" href="https://www.amazon.co.uk/AJAZZ-Mechanical-Keyboard-Full-key-Hot-Swappable/dp/B0CQNRQFW8">
+                            <span class="link-title">Keyboard</span>
+                            <span class="line"></span>
+                            <span class="link-sub">YINDIAO AK820 75%</span>
+                        </a>
+                        <a target="_blank" href="https://www.amazon.co.uk/Lenovo-D32q-20-31-5-FreeSync-Monitor/dp/B085ZXS65Y">
+                            <span class="link-title">Monitor</span>
+                            <span class="line"></span>
+                            <span class="link-sub">Lenovo D32q-20</span>
+                        </a>
+                        <a target="_blank" href="https://www.ikea.com/gb/en/p/sigfinn-monitor-stand-fixed-height-bamboo-veneer-20362929/">
+                            <span class="link-title">Monitor stand</span>
+                            <span class="line"></span>
+                            <span class="link-sub">Ikea Sigfinn</span>
+                        </a>
+                        <a target="_blank" href="https://www.logitech.com/en-eu/products/mice/lift-vertical-ergonomic-mouse.html">
+                            <span class="link-title">Mouse</span>
+                            <span class="line"></span>
+                            <span class="link-sub">Logitech Vertical Ergonomic Lift</span>
+                        </a>
+                        <a target="_blank" href="https://www.samsung.com/uk/smartphones/galaxy-z-flip5/">
+                            <span class="link-title">Phone</span>
+                            <span class="line"></span>
+                            <span class="link-sub">Samsung Z Flip5</span>
+                        </a>
+                        <a target="_blank" href="https://eu.govee.com/products/govee-neon-rope-light-2?variant=42850406072504">
+                            <span class="link-title">Rope lights</span>
+                            <span class="line"></span>
+                            <span class="link-sub">Govee</span>
+                        </a>
+                        <a target="_blank" href="https://www.samsung.com/uk/tablets/galaxy-tab-s/galaxy-tab-s9-plus-5g-graphite-256gb-sm-x816bzaaeub/">
+                            <span class="link-title">Tablet</span>
+                            <span class="line"></span>
+                            <span class="link-sub">Samsung Galaxy Tab S9+</span>
+                        </a>
+                        <a target="_blank" href="https://www.amazon.co.uk/AJAZZ-Mechanical-Keyboard-Full-key-Hot-Swappable/dp/B0CQNRQFW8">
+                            <span class="link-title">Switches</span>
+                            <span class="line"></span>
+                            <span class="link-sub">Tactile HP Yellow Switch</span>
+                        </a>
+                        <a target="_blank" href="https://www.ultimateears.com/en-hk/wireless-speakers/wonderboom-4.html">
+                            <span class="link-title">Speaker</span>
+                            <span class="line"></span>
+                            <span class="link-sub">Ultimate Ears WONDERBOOM 2</span>
+                        </a>
+                    </article>
+                    
+                </section>
+
             </main>
 
-            <footer> © 2025 Flipse. All rights reserved.</footer>
+            <footer>© Flipse 2025</footer>
 
         </div><!-- .site-container end -->  
 
 
-        <div class="bulb-container flex column align-center">
-    
-            <div class="chord"></div>
-    
-            <button class="bulb theme-toggle bulb-off" aria-label="toggle dark & light mode"  type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" viewBox="0 0 512 512" xml:space="preserve">
-                <path style="fill:#FFEA8A;" d="M249.783,0.118C164.426,3.359,96.311,74.366,96.416,159.784  c0.053,43.258,17.319,82.48,45.314,111.193c21.96,22.523,34.478,52.583,34.478,84.038v4.049v13.299h159.584v-13.299v-4.045  c0-31.47,12.539-61.532,34.503-84.068c28.024-28.754,45.289-68.044,45.289-111.367C415.584,69.385,340.751-3.337,249.783,0.118z"/>
-                <path style="fill:#FFDB2D;" d="M256,0.013v372.35h79.792v-13.299v-4.045c0-31.47,12.539-61.532,34.503-84.068  c28.024-28.754,45.289-68.044,45.289-111.367C415.584,71.448,344.134,0.016,256,0.013z"/>
-                <polygon style="fill:#FFAF33;" points="323.299,213.585 295.09,185.376 256,224.465 216.91,185.376 188.701,213.585   236.052,260.938 236.052,372.363 275.948,372.363 275.948,260.938 "/>
-                <rect x="236.052" y="438.857" style="fill:#AEADB3;" width="39.896" height="73.143"/>
-                <path style="fill:#DFDFE1;" d="M256,452.156c51.413,0,93.091-41.678,93.091-93.091H162.909  C162.909,410.478,204.587,452.156,256,452.156z"/>
-                <path style="fill:#CFCDD2;" d="M256,359.065v93.091c51.413,0,93.091-41.678,93.091-93.091H256z"/>
-                </svg>
-            </button>
-        </div>
+        <button class="theme-toggle" aria-label="toggle dark & light mode" type="button" role="button">
+            <svg  xmlns="http://www.w3.org/2000/svg" class="light-on" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
+            <svg  xmlns="http://www.w3.org/2000/svg" class="light-off" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z" /><path d="M6.343 17.657l-1.414 1.414" /><path d="M6.343 6.343l-1.414 -1.414" /><path d="M17.657 6.343l1.414 -1.414" /><path d="M17.657 17.657l1.414 1.414" /><path d="M4 12h-2" /><path d="M12 4v-2" /><path d="M20 12h2" /><path d="M12 20v2" /></svg>
+        </button>
 
         <script src="https://unpkg.com/@popperjs/core@2"></script>
         <script src="https://unpkg.com/tippy.js@6"></script>
