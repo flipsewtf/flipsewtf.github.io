@@ -1,6 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
 :root {
     --font-size: 1.4rem;
-    --aside-width: 130px;
+    --aside-width: 160px;
     --gap: 3rem;
 }
 :root,
@@ -43,8 +47,6 @@ html.theme-transition *:after {
 }
 * {
     margin: 0;
-    scrollbar-width: thin;
-    scrollbar-color: var(--c-acc1) var(--c-bg1);
 }
 html {
     height: 100%;
@@ -78,22 +80,33 @@ h2 {
     background-color: var(--c-acc1);
     color: var(--c-text);
 }
-.tippy-box[data-theme~="custom"] {
-    font-size: 0.6em;
-    font-family: "Inter", sans-serif;
-    font-weight: 600;
-    text-align: center;
-    padding: 6px 5px 4px 5px;
-    color: var(--c-bg1);
-    border: 0;
-    border-radius: 10rem;
-    background-color: var(--c-acc1);
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin: 1.5rem;
-    z-index: 9999999;
+@supports selector(::-webkit-scrollbar) {
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background-clip: padding-box;
+        background-color: var(--c-bg1);
+        border-left: 1px solid var(--c-border);
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--c-text);
+    }
+    ::-webkit-scrollbar-button {
+        display: none;
+    }
+    ::-webkit-scrollbar-corner {
+        background-color: var(--c-bg1);
+    }
 }
 
+@-moz-document url-prefix() {
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: rgb(var(--c-text)) rgb(var(--c-bg1));
+  }
+}
 body {
     font-family: "Inter", serif;
     font-size: var(--font-size);
@@ -145,7 +158,7 @@ header {
         object-fit: cover;
         display: block;
         border-radius: 9999px;
-        height: 205px;
+        height: 245px;
         overflow-clip-margin: unset;
     }
     .intro {
@@ -161,8 +174,8 @@ section {
     grid-template-columns: var(--aside-width) 1fr;
 }
 .about svg {
-    width: 19px;
-    height: auto;
+    width: 20px;
+    height: 20px;
     vertical-align: middle;
     margin-bottom: 0.5px;
 }
@@ -172,21 +185,21 @@ section {
     font-family: "Roboto Mono", serif;
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1.2rem 1.8rem;
     a {
         color: var(--c-text);
-        display: inline-flex;
-        border: 1px solid var(--c-border);
-        padding: 6px;
-        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
 
         &:hover {
             color: var(--c-faded);
         }
     }
     svg {
-        width: 21px;
-        height: auto;
+        width: 22px;
+        height: 22px;
+        color: var(--c-text)!important;
     }
 }
 h2 {
@@ -243,43 +256,6 @@ article.bag {
         }
     }
 }
-
-/*  THEME TOGGLE */
-html[data-theme="light"] button.theme-toggle .light-off,
-html[data-theme="dark"] button.theme-toggle .light-on {
-    transform: scale(0);
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease !important;
-}
-
-html[data-theme="light"] button.theme-toggle .light-on,
-html[data-theme="dark"] button.theme-toggle .light-off {
-    transform: scale(1);
-    opacity: 1;
-    transition: transform 0.3s ease, opacity 0.3s ease !important;
-}
-
-button.theme-toggle {
-    display: flex;
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-    bottom: 3rem;
-    right: 3rem;
-    background: var(--c-text);
-    color: var(--c-bg1);
-    padding: 1.8rem;
-    border-radius: 50%;
-
-    svg {
-        width: 22px;
-        height: 22px;
-        display: block;
-        transform-origin: center;
-        position: absolute;
-        stroke-width: 1.25;
-    }
-}
 footer {
     padding: 3rem;
     margin-top: 4rem;
@@ -296,7 +272,7 @@ footer::first-letter {
     vertical-align: sub;
     font-weight: 300;
 }
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 540px) {
     main {
         width: 80vw;
     }
@@ -305,7 +281,7 @@ footer::first-letter {
     }
     header img {
         height: auto;
-        width: 70vw;
+        width: 60vw;
     }
     header .intro {
         text-align: center;

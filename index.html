@@ -1,166 +1,150 @@
 <!DOCTYPE html>
 
-<html lang="en" data-theme="light"> 
+<html lang="en"> 
     <head>
-        <title>flipse.me</title>
+        <title>Morunstera.dk</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="https://i.imgur.com/ZgisjPA.png" />
         <meta name="description" content="" />
 
-        <script> 
-            const storedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-            if (storedTheme) {
-                document.documentElement.setAttribute("data-theme", storedTheme); 
-            }
+        <script>
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
         </script>
-
+        
         <link href="style.css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     </head>
 
     <body>
+        <main>
+            <header>
+                <img src="https://i.imgur.com/xazqcoQ.png">
+                <div class="intro">
+                    Cozy <em>hobby</em> coder & giant nerd with a side of <em>concert</em> enthusiasm and autism.
+                </div>
+            </header>
 
-        <div class="site-container">
-            
-            <main>
-
-                <header>
-
-                    <img src="https://i.imgur.com/xazqcoQ.png">
-                    <div class="intro">
-                         Cozy <em>hobby</em> coder & record collecting <em>concert</em> enthusiast.
-                    </div>
-
-                </header>
-
-                <section>
-                    <h2>/about</h2>
-                    <article class="about">
-                        <p> Hi! <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M207.31,49.18a20,20,0,0,0-38.63-10.35l-18.14,67.68h0l-5.37-1.07h0L127.32,38.83A20,20,0,1,0,88.69,49.18l12.68,47.35v0l-.57-.14L80,92.41a20,20,0,0,0-8,39.19l7.87,1.51a20,20,0,0,0-23.46,15.62,19.52,19.52,0,0,0-.41,4h0V160a72,72,0,0,0,72.55,72c39.7-.3,71.45-33.2,71.45-72.9v-3.34a47.9,47.9,0,0,0-12.59-32.39h0Z" opacity="0.2"/><path d="M72,131.6a20,20,0,0,1,8-39.19l20.81,4a20,20,0,1,1-8,39.19Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M56,152.72V160a72,72,0,0,0,72.55,72c39.7-.3,71.45-33.2,71.45-72.9v-3.34a48,48,0,0,0-38.59-47.07L140,104.41a20,20,0,0,0-8,39.19l15.37,3.07A28,28,0,0,0,152,179.6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M72,172.32a20,20,0,0,1,8-39.19l10,2a20,20,0,0,1-8,39.2Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M101.37,96.53,88.69,49.18a20,20,0,1,1,38.63-10.35l17.85,66.61" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M150.54,106.51l18.14-67.68a20,20,0,0,1,38.63,10.35l-19.88,74.19" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg> My name is Flipse (she/her), and I have specialized in Tumblr themes since 2012. I also do titbits of scripts and fun add-ons, but I'm chronically ill, so everything is made out of pure enjoyment <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M101.11,197.11,58.89,154.89l-18.4,50.63a7.79,7.79,0,0,0,10,10Z" opacity="0.2"/><path d="M78.09,102.09l75.82,75.82,41-14.9a7.79,7.79,0,0,0,2.85-12.84L105.83,58.29A7.79,7.79,0,0,0,93,61.14Z" opacity="0.2"/><path d="M40.49,205.52,93,61.14a7.79,7.79,0,0,1,12.84-2.85l91.88,91.88A7.79,7.79,0,0,1,194.86,163L50.48,215.51A7.79,7.79,0,0,1,40.49,205.52Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M168,72s0-24,24-24,24-24,24-24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="144" y1="16" x2="144" y2="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="216" y1="112" x2="232" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="216" y1="80" x2="240" y2="72" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="78.09" y1="102.09" x2="153.91" y2="177.91" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="101.11" y1="197.11" x2="58.89" y2="154.89" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg></p>
-                            
-                            <p>Concerts and especially building my record collection <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128,32a96,96,0,1,0,96,96A96,96,0,0,0,128,32Zm0,120a24,24,0,1,1,24-24A24,24,0,0,1,128,152Z" opacity="0.2"/><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M64,128a64,64,0,0,1,64-64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M192,128a64,64,0,0,1-64,64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="128" cy="128" r="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg> have my heart, and I also love fiddling with my cozy desk setup <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M32,152V64A16,16,0,0,1,48,48H208a16,16,0,0,1,16,16v88Z" opacity="0.2"/><rect x="32" y="48" width="192" height="144" rx="16" transform="translate(256 240) rotate(180)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="160" y1="224" x2="96" y2="224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="32" y1="152" x2="224" y2="152" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="128" y1="192" x2="128" y2="224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg></p>
-
-                    </article>
-
-                </section>
-
-                <section>
-
-                    <h2>/socials</h2>
-                    
-                    <article class="socials">
+            <section>
+                <h2>/about</h2>
+                <article class="about">
+                    <p> Hi! <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M207.31,49.18a20,20,0,0,0-38.63-10.35l-18.14,67.68h0l-5.37-1.07h0L127.32,38.83A20,20,0,1,0,88.69,49.18l12.68,47.35v0l-.57-.14L80,92.41a20,20,0,0,0-8,39.19l7.87,1.51a20,20,0,0,0-23.46,15.62,19.52,19.52,0,0,0-.41,4h0V160a72,72,0,0,0,72.55,72c39.7-.3,71.45-33.2,71.45-72.9v-3.34a47.9,47.9,0,0,0-12.59-32.39h0Z" opacity="0.2"/><path d="M72,131.6a20,20,0,0,1,8-39.19l20.81,4a20,20,0,1,1-8,39.19Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M56,152.72V160a72,72,0,0,0,72.55,72c39.7-.3,71.45-33.2,71.45-72.9v-3.34a48,48,0,0,0-38.59-47.07L140,104.41a20,20,0,0,0-8,39.19l15.37,3.07A28,28,0,0,0,152,179.6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M72,172.32a20,20,0,0,1,8-39.19l10,2a20,20,0,0,1-8,39.2Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M101.37,96.53,88.69,49.18a20,20,0,1,1,38.63-10.35l17.85,66.61" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M150.54,106.51l18.14-67.68a20,20,0,0,1,38.63,10.35l-19.88,74.19" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg> My name is Flipse (she/her), and I have specialized in Tumblr themes since 2012. I also do titbits of scripts and fun add-ons, but I'm chronically ill, so everything is made out of pure enjoyment <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M101.11,197.11,58.89,154.89l-18.4,50.63a7.79,7.79,0,0,0,10,10Z" opacity="0.2"/><path d="M78.09,102.09l75.82,75.82,41-14.9a7.79,7.79,0,0,0,2.85-12.84L105.83,58.29A7.79,7.79,0,0,0,93,61.14Z" opacity="0.2"/><path d="M40.49,205.52,93,61.14a7.79,7.79,0,0,1,12.84-2.85l91.88,91.88A7.79,7.79,0,0,1,194.86,163L50.48,215.51A7.79,7.79,0,0,1,40.49,205.52Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M168,72s0-24,24-24,24-24,24-24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="144" y1="16" x2="144" y2="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="216" y1="112" x2="232" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="216" y1="80" x2="240" y2="72" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="78.09" y1="102.09" x2="153.91" y2="177.91" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="101.11" y1="197.11" x2="58.89" y2="154.89" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg></p>
                         
-                        
-
-                        <a href="https://bsky.app/profile/flipse.me" data-tippy-content="Bluesky" target="_blank">
-                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bluesky"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6.335 5.144c-1.654 -1.199 -4.335 -2.127 -4.335 .826c0 .59 .35 4.953 .556 5.661c.713 2.463 3.13 2.75 5.444 2.369c-4.045 .665 -4.889 3.208 -2.667 5.41c1.03 1.018 1.913 1.59 2.667 1.59c2 0 3.134 -2.769 3.5 -3.5c.333 -.667 .5 -1.167 .5 -1.5c0 .333 .167 .833 .5 1.5c.366 .731 1.5 3.5 3.5 3.5c.754 0 1.637 -.571 2.667 -1.59c2.222 -2.203 1.378 -4.746 -2.667 -5.41c2.314 .38 4.73 .094 5.444 -2.369c.206 -.708 .556 -5.072 .556 -5.661c0 -2.953 -2.68 -2.025 -4.335 -.826c-2.293 1.662 -4.76 5.048 -5.665 6.856c-.905 -1.808 -3.372 -5.194 -5.665 -6.856z" /></svg>
-                        </a>
-
-                        <a href="https://github.com/flipsewtf" data-tippy-content="GitHub"  target="_blank">
-                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
-                        </a>
-
-                        <a href="https://www.threads.net/@flipse.me" data-tippy-content="Threads" target="_blank">
-                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-threads"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19 7.5c-1.333 -3 -3.667 -4.5 -7 -4.5c-5 0 -8 2.5 -8 9s3.5 9 8 9s7 -3 7 -5s-1 -5 -7 -5c-2.5 0 -3 1.25 -3 2.5c0 1.5 1 2.5 2.5 2.5c2.5 0 3.5 -1.5 3.5 -5s-2 -4 -3 -4s-1.833 .333 -2.5 1" /></svg>
-                        </a>
-
-                        <a href="https://mournstera.tumblr.com/" data-tippy-content="Tumblr" target="_blank">
-                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tumblr"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 21h4v-4h-4v-6h4v-4h-4v-4h-4v1a3 3 0 0 1 -3 3h-1v4h4v6a4 4 0 0 0 4 4" /></svg>
-                        </a>
-                    </article>
-                </section>
-
-                <section>
-
-                    <h2 style="margin-top: 1px;">/my bag</h2>
+                    <p>Concerts and especially building my record collection <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128,32a96,96,0,1,0,96,96A96,96,0,0,0,128,32Zm0,120a24,24,0,1,1,24-24A24,24,0,0,1,128,152Z" opacity="0.2"/><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M64,128a64,64,0,0,1,64-64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M192,128a64,64,0,0,1-64,64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="128" cy="128" r="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg> have my heart, and I also love fiddling with my cozy desk setup <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M32,152V64A16,16,0,0,1,48,48H208a16,16,0,0,1,16,16v88Z" opacity="0.2"/><rect x="32" y="48" width="192" height="144" rx="16" transform="translate(256 240) rotate(180)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="160" y1="224" x2="96" y2="224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="32" y1="152" x2="224" y2="152" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="128" y1="192" x2="128" y2="224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg></p>
                     
-                    <article class="bag">
-                        <a target="_blank" href="https://www.omen.com/us/en/desktops/omen-25l.html">
-                            <span class="link-title">Computer</span>
-                            <span class="line"></span>
-                            <span class="link-sub">HP Omen 25L i5-12/16/2048/3070</span>
-                        </a>
-                        <a target="_blank" href="https://jysk.co.uk/office/desks/computer-desks/desk-stauning-80x160-white">
-                            <span class="link-title">Desk</span>
-                            <span class="line"></span>
-                            <span class="link-sub">Jysk Staunning</span>
-                        </a>
-                        <a target="_blank" href="https://www.jbl.com/on-ear-headphones/TUNE510BT-.html">
-                            <span class="link-title">Headphones</span>
-                            <span class="line"></span>
-                            <span class="link-sub">JBL Tune 510BT</span>
-                        </a>
-                        <a target="_blank" href="https://www.amazon.com/Sumgsn-Gradient-Mechanical-Keyboard-Switches/dp/B0BYJBRT6L?th=1">
-                            <span class="link-title">Keycaps</span>
-                            <span class="line"></span>
-                            <span class="link-sub">Sumgsn gradient green</span>
-                        </a>
-                        <a target="_blank" href="https://www.amazon.co.uk/AJAZZ-Mechanical-Keyboard-Full-key-Hot-Swappable/dp/B0CQNRQFW8">
-                            <span class="link-title">Keyboard</span>
-                            <span class="line"></span>
-                            <span class="link-sub">YINDIAO AK820 75%</span>
-                        </a>
-                        <a target="_blank" href="https://www.amazon.co.uk/Lenovo-D32q-20-31-5-FreeSync-Monitor/dp/B085ZXS65Y">
-                            <span class="link-title">Monitor</span>
-                            <span class="line"></span>
-                            <span class="link-sub">Lenovo D32q-20</span>
-                        </a>
-                        <a target="_blank" href="https://www.ikea.com/gb/en/p/sigfinn-monitor-stand-fixed-height-bamboo-veneer-20362929/">
-                            <span class="link-title">Monitor stand</span>
-                            <span class="line"></span>
-                            <span class="link-sub">Ikea Sigfinn</span>
-                        </a>
-                        <a target="_blank" href="https://www.logitech.com/en-eu/products/mice/lift-vertical-ergonomic-mouse.html">
-                            <span class="link-title">Mouse</span>
-                            <span class="line"></span>
-                            <span class="link-sub">Logitech Vertical Ergonomic Lift</span>
-                        </a>
-                        <a target="_blank" href="https://www.samsung.com/uk/smartphones/galaxy-z-flip5/">
-                            <span class="link-title">Phone</span>
-                            <span class="line"></span>
-                            <span class="link-sub">Samsung Z Flip5</span>
-                        </a>
-                        <a target="_blank" href="https://eu.govee.com/products/govee-neon-rope-light-2?variant=42850406072504">
-                            <span class="link-title">Rope lights</span>
-                            <span class="line"></span>
-                            <span class="link-sub">Govee</span>
-                        </a>
-                        <a target="_blank" href="https://www.samsung.com/uk/tablets/galaxy-tab-s/galaxy-tab-s9-plus-5g-graphite-256gb-sm-x816bzaaeub/">
-                            <span class="link-title">Tablet</span>
-                            <span class="line"></span>
-                            <span class="link-sub">Samsung Galaxy Tab S9+</span>
-                        </a>
-                        <a target="_blank" href="https://www.amazon.co.uk/AJAZZ-Mechanical-Keyboard-Full-key-Hot-Swappable/dp/B0CQNRQFW8">
-                            <span class="link-title">Switches</span>
-                            <span class="line"></span>
-                            <span class="link-sub">Tactile HP Yellow Switch</span>
-                        </a>
-                        <a target="_blank" href="https://www.ultimateears.com/en-hk/wireless-speakers/wonderboom-4.html">
-                            <span class="link-title">Speaker</span>
-                            <span class="line"></span>
-                            <span class="link-sub">Ultimate Ears WONDERBOOM 2</span>
-                        </a>
-                    </article>
-                    
-                </section>
+                    <p>My love for Doctor Who <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M177,68.82h0A55.7,55.7,0,0,1,184,96v3.9a16,16,0,0,1-12.35,15.52A195.71,195.71,0,0,1,128,120a195.87,195.87,0,0,1-43.65-4.58A15.94,15.94,0,0,1,72,99.9V96.83a57.07,57.07,0,0,1,7.37-28.08h0C41.86,76.51,16,93,16,112c0,26.51,50.14,48,112,48s112-21.49,112-48C240,93,214.29,76.61,177,68.82Z" opacity="0.2"/><line x1="168" y1="192" x2="176" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="128" y1="192" x2="128" y2="224" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="88" y1="192" x2="80" y2="216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M177,68.82C214.29,76.61,240,93,240,112c0,26.51-50.14,48-112,48S16,138.51,16,112c0-19,25.86-35.49,63.35-43.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M72,99.9a15.94,15.94,0,0,0,12.34,15.52A195.87,195.87,0,0,0,128,120a195.71,195.71,0,0,0,43.64-4.58A16,16,0,0,0,184,99.9V96a56,56,0,0,0-56.74-56C96.48,40.4,72,66.06,72,96.83Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg> is strong, and I enjoy TTRPG <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><rect x="40" y="40" width="176" height="176" rx="24" opacity="0.2"/><rect x="40" y="40" width="176" height="176" rx="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="92" cy="84" r="12"/><circle cx="164" cy="84" r="12"/><circle cx="92" cy="128" r="12"/><circle cx="164" cy="128" r="12"/><circle cx="92" cy="172" r="12"/><circle cx="164" cy="172" r="12"/></svg></p>
+                </article>
 
-            </main>
+            </section>
 
-            <footer>© Flipse 2025</footer>
+            <section>
+                <h2>/socials</h2>
+                <article class="socials">
+                    <a href="https://bsky.app/profile/mournstera.dk" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><line x1="128" y1="56" x2="128" y2="180" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M187.76,151.94c8.05.48,29.5-1.29,37.36-32.23C233.21,87.84,240.22,48,208.93,48S128,95.8,128,127.67C128,95.8,78.36,48,47.07,48S22.79,87.84,30.88,119.71c7.86,30.94,29.31,32.71,37.36,32.23" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M88,144a36.11,36.11,0,1,0,40,36,36,36,0,1,0,40-36" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                        Bluesky
+                    </a>
 
-        </div><!-- .site-container end -->  
+                    <a href="https://github.com/flipsewtf" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M119.83,56A52,52,0,0,0,76,32a51.92,51.92,0,0,0-3.49,44.7A49.28,49.28,0,0,0,64,104v8a48,48,0,0,0,48,48h48a48,48,0,0,0,48-48v-8a49.28,49.28,0,0,0-8.51-27.3A51.92,51.92,0,0,0,196,32a52,52,0,0,0-43.83,24Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M104,232V192a32,32,0,0,1,32-32h0a32,32,0,0,1,32,32v40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M104,208H72a32,32,0,0,1-32-32A32,32,0,0,0,8,144" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                        GitHub
+                    </a>
 
+                    <a href="https://www.instagram.com/mournstera/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><circle cx="128" cy="128" r="40" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/><rect x="32" y="32" width="192" height="192" rx="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="180" cy="76" r="12"/></svg>
+                        Instagram
+                    </a>
 
-        <button class="theme-toggle" aria-label="toggle dark & light mode" type="button" role="button">
-            <svg  xmlns="http://www.w3.org/2000/svg" class="light-on" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
-            <svg  xmlns="http://www.w3.org/2000/svg" class="light-off" width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z" /><path d="M6.343 17.657l-1.414 1.414" /><path d="M6.343 6.343l-1.414 -1.414" /><path d="M17.657 6.343l1.414 -1.414" /><path d="M17.657 17.657l1.414 1.414" /><path d="M4 12h-2" /><path d="M12 4v-2" /><path d="M20 12h2" /><path d="M12 20v2" /></svg>
-        </button>
+                    <a href="https://www.threads.net/@mournstera" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M200,77.65C189.86,51.29,168.57,32,128,32c-64,0-80,48-80,96s16,96,80,96c48,0,72-32,72-56,0-64-104-64-104-16,0,40,72,40,72-24,0-56-56-56-72-32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                        Threads
+                    </a>
 
-        <script src="https://unpkg.com/@popperjs/core@2"></script>
-        <script src="https://unpkg.com/tippy.js@6"></script>
+                    <a href="https://mournstera.tumblr.com/"target="_blank">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tumblr"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 21h4v-4h-4v-6h4v-4h-4v-4h-4v1a3 3 0 0 1 -3 3h-1v4h4v6a4 4 0 0 0 4 4" /></svg>
+                        Tumblr
+                    </a>
+                </article>
+            </section>
+
+            <section>
+
+                <h2 style="margin-top: 1px;">/my bag</h2>
+                
+                <article class="bag">
+                    <a target="_blank" href="https://www.omen.com/us/en/desktops/omen-25l.html">
+                        <span class="link-title">Computer</span>
+                        <span class="line"></span>
+                        <span class="link-sub">HP Omen 25L i5-12/16/2048/3070</span>
+                    </a>
+                    <a target="_blank" href="https://www.ikea.com/gb/en/p/mittzon-desk-walnut-veneer-white-s89526103/">
+                        <span class="link-title">Desk</span>
+                        <span class="line"></span>
+                        <span class="link-sub">Mitzon</span>
+                    </a>
+                    <a target="_blank" href="https://www.jbl.com/on-ear-headphones/TUNE510BT-.html">
+                        <span class="link-title">Headphones</span>
+                        <span class="line"></span>
+                        <span class="link-sub">JBL Tune 510BT</span>
+                    </a>
+                    <a target="_blank" href="https://www.amazon.com/Sumgsn-Gradient-Mechanical-Keyboard-Switches/dp/B0BYJBRT6L?th=1">
+                        <span class="link-title">Keycaps</span>
+                        <span class="line"></span>
+                        <span class="link-sub">Sumgsn gradient green</span>
+                    </a>
+                    <a target="_blank" href="https://www.amazon.co.uk/AJAZZ-Mechanical-Keyboard-Full-key-Hot-Swappable/dp/B0CQNRQFW8">
+                        <span class="link-title">Keyboard</span>
+                        <span class="line"></span>
+                        <span class="link-sub">YINDIAO AK820 75%</span>
+                    </a>
+                    <a target="_blank" href="https://www.amazon.co.uk/Lenovo-D32q-20-31-5-FreeSync-Monitor/dp/B085ZXS65Y">
+                        <span class="link-title">Monitor</span>
+                        <span class="line"></span>
+                        <span class="link-sub">Lenovo D32q-20</span>
+                    </a>
+                    <a target="_blank" href="https://www.ikea.com/gb/en/p/sigfinn-monitor-stand-fixed-height-bamboo-veneer-20362929/">
+                        <span class="link-title">Monitor stand</span>
+                        <span class="line"></span>
+                        <span class="link-sub">Ikea Sigfinn</span>
+                    </a>
+                    <a target="_blank" href="https://www.logitech.com/en-eu/products/mice/lift-vertical-ergonomic-mouse.html">
+                        <span class="link-title">Mouse</span>
+                        <span class="line"></span>
+                        <span class="link-sub">Logitech Vertical Ergonomic Lift</span>
+                    </a>
+                    <a target="_blank" href="https://www.samsung.com/uk/smartphones/galaxy-z-flip5/">
+                        <span class="link-title">Phone</span>
+                        <span class="line"></span>
+                        <span class="link-sub">Samsung Z Flip5</span>
+                    </a>
+                    <a target="_blank" href="https://eu.govee.com/products/govee-neon-rope-light-2?variant=42850406072504">
+                        <span class="link-title">Rope lights</span>
+                        <span class="line"></span>
+                        <span class="link-sub">Govee</span>
+                    </a>
+                    <a target="_blank" href="https://www.samsung.com/uk/tablets/galaxy-tab-s/galaxy-tab-s9-plus-5g-graphite-256gb-sm-x816bzaaeub/">
+                        <span class="link-title">Tablet</span>
+                        <span class="line"></span>
+                        <span class="link-sub">Samsung Galaxy Tab S9+</span>
+                    </a>
+                    <a target="_blank" href="https://www.amazon.co.uk/AJAZZ-Mechanical-Keyboard-Full-key-Hot-Swappable/dp/B0CQNRQFW8">
+                        <span class="link-title">Switches</span>
+                        <span class="line"></span>
+                        <span class="link-sub">Tactile HP Yellow Switch</span>
+                    </a>
+                    <a target="_blank" href="https://www.ultimateears.com/en-hk/wireless-speakers/wonderboom-4.html">
+                        <span class="link-title">Speaker</span>
+                        <span class="line"></span>
+                        <span class="link-sub">Ultimate Ears WONDERBOOM 2</span>
+                    </a>
+                </article>
+                
+            </section>
+
+        </main>
+
+        <footer>© Flipse 2025</footer>
+
         <script src="jazz.js"></script>
     </body>
 </html>

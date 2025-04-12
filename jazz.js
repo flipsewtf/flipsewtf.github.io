@@ -1,41 +1,20 @@
-const commonOptions = {
-    theme: "custom",
-    followCursor: true,
-    placement: "top",
-    touch: "hold",
-    arrow: false,
-};
+const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-tippy("[data-tippy-content]", {
-    ...commonOptions,
-    content(reference) {
-        return reference.getAttribute("data-tippy-content");
-    },
-});
+function applySystemTheme(e) {
+    const prefersDark = e.matches ?? mediaQuery.matches;
+    document.documentElement.classList.add("theme-transition");
+    document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+    setTimeout(() => {
+        document.documentElement.classList.remove("theme-transition");
+    }, 50);
+}
 
-const themeToggleButtons = document.querySelectorAll(".theme-toggle");
+// Apply the theme on page load
+applySystemTheme(mediaQuery);
 
-themeToggleButtons.forEach((btn) => {
-    const storedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    const initialTooltipText = storedTheme === "dark" ? "Toggle light mode" : "Toggle dark mode";
-    tippy(btn, {
-        ...commonOptions,
-        content: initialTooltipText,
-    });
-
-    btn.addEventListener("click", function () {
-        const currentTheme = document.documentElement.getAttribute("data-theme");
-        const targetTheme = currentTheme === "light" ? "dark" : "light";
-
-        const tooltipText = targetTheme === "dark" ? "Toggle light mode" : "Toggle dark mode";
-        btn._tippy.setContent(tooltipText);
-
-        document.documentElement.classList.add("theme-transition");
-        document.documentElement.setAttribute("data-theme", targetTheme);
-        localStorage.setItem("theme", targetTheme);
-
-        setTimeout(function () {
-            document.documentElement.classList.remove("theme-transition");
-        }, 50);
-    });
-});
+// Listen for system theme changes
+if (mediaQuery.addEventListener) {
+    mediaQuery.addEventListener("change", applySystemTheme);
+} else if (mediaQuery.addListener) {
+    mediaQuery.addListener(applySystemTheme); // Safari fallback
+}
